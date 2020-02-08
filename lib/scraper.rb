@@ -32,6 +32,9 @@ class Scraper
       :bio => profile.css("p").text 
     }
     profile.css(".social-icon-container").css("a").each do |icon| 
+      if(icon.attribute("href").value.include?("twitter"))
+        :twitter => icon.attribute("href").value
+      end 
     binding.pry 
     end 
     student_profile 
