@@ -31,7 +31,9 @@ class Scraper
       :profile_quote => profile.css(".profile-quote").text, 
       :bio => profile.css("p").text 
     }
+    profile.css(".social-icon-container").css("a").each do |icon| 
     binding.pry 
+    end 
     student_profile 
   end
 end
