@@ -36,7 +36,6 @@ class Scraper
       else 
         student_profile[:blog] = icon.attribute("href").value 
       end 
-    binding.pry 
     end 
     student_profile 
   end
