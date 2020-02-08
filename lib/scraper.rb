@@ -29,7 +29,7 @@ class Scraper
       :github => profile.css("a").attribute("href").value,
       :blog => profile.css("a").attribute("href").value,
       :profile_quote => profile.css(".profile-quote").text, 
-      :bio => profile.css("p.description-holder").text 
+      :bio => profile.css("description-holder").text 
     }
     student_profile 
   end
