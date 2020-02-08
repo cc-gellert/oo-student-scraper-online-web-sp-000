@@ -34,6 +34,12 @@ class Scraper
     profile.css(".social-icon-container").css("a").each do |icon| 
       if(icon.attribute("href").value.include?("twitter"))
         student_profile[:twitter] = icon.attribute("href").value
+      elsif(icon.attribute("href").value.include?("linkedin"))
+        student_profile[:linkedin] = icon.attribute("href").value 
+      elsif(icon.attribute("href").value.include?("github"))
+        student_profile[:github] = icon.attribute("href").value
+      else 
+        student_profile[:blog] = icon.attribute("href").value 
       end 
     binding.pry 
     end 
